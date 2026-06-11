@@ -1,0 +1,40 @@
+{
+  "name": "ai-doc-processor",
+  "version": "1.0.0",
+  "description": "AI-Powered Document Processing API with LLM evaluation pipeline",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage",
+    "lint": "eslint src/ --ext .js",
+    "evaluator": "cd evaluator && uvicorn main:app --reload --port 8001"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.14.0",
+    "pdfparse": "^1.1.1",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^9.0.0",
+    "winston": "^3.11.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3",
+    "eslint": "^8.55.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
